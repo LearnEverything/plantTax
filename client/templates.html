@@ -1,0 +1,61 @@
+<template name="hello">
+  <div class="row">
+    {{#each plants}}
+    <div class="col-md-3">
+      <h4>{{plantType}}</h4>
+      <h5>{{germType}}</h5>
+      <p>{{shape}}</p>
+      <p>{{variegation}}</p>
+      <a href="#" data-action="removePlant" data-plant-id="{{_id}}">remove</a>
+    </div>
+    {{/each}}
+  </div>
+</template>
+
+<template name="plantForm">
+  {{> seedTypeForm}}
+</template>  
+
+<template name="seedTypeForm">
+  <form role="form">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <label><button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" data-original-title="The Type of Seed">Seed Type</button></label>
+          <input type="text" class="form-control" name="plantType" placeholder="ex. Monocot, Dicot">
+        </div>
+        <div class="col-md-3">
+          <label>Germination Method</label>
+          <input type="text" class="form-control" name="germType" placeholder="ex. Angiosperm, etc.">
+        </div>
+        <div class="col-md-3">
+          <label>Leaf shape</label>
+          <input type="text" class="form-control" name="leafShape" placeholder="ex. Round, Pointy, Fan, etc.">
+        </div>
+        <div class="col-md-3">
+          <label>Variegated?</label>
+          <select name="variegation">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-default" data-action="submit">Submit</button>
+  </form>
+</template>
+
+<template name="plantImageAndSubmit">
+  <h1>Cool change</h1>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"> Check me out
+      </label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</template>

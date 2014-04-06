@@ -1,0 +1,1 @@
+Plants = new Meteor.Collection("plants");

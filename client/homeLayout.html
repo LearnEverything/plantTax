@@ -1,0 +1,18 @@
+<template name="homeLayout">
+  <nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li>
+    <a href="{{pathFor 'home'}}">Home</a>
+      </li>
+      <li>
+    <a href="{{pathFor 'enterPlant'}}">Enter a plant!</a>
+      </li>
+      <li class="active">
+    <a href="{{pathFor 'listPlants'}}">List Plants!</a>
+        </li>
+    </ul>
+    </div>
+</nav>
+  {{> yield}}
+</template>
